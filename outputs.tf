@@ -4,7 +4,7 @@ output "region" {
 }
 
 output "project_id" {
-  value       = var.project.id
+  value       = var.project_id
   description = "ID do projeto GCP"
   sensitive   = true
 }

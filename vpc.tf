@@ -7,14 +7,15 @@ variable "region" {
 }
 
 provider "google" {
-  project = ver.project_id
-  region  = var.region
+  credentials = file("bis2bis.json") 
+  project     = var.project_id
+  region      = var.region
 }
 
 # VPC
 resource "google_compute_network" "vpc" {
   name                   = sensitive("${var.project_id}-vpc")
-  auto_create_subnetwork = "false"
+  auto_create_subnetworks = false
 }
 
 # Subnet

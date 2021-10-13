@@ -1,11 +1,11 @@
 #Variáveis extras
 variable "gke_username" {
-  default     = "rmagalhaes@equinix.com"
+  default     = ""
   description = "user do gke"
 }
 
 variable "gke_password" {
-  default     = "r628824@M"
+  default     = ""
   description = "password do gke"
 }
 
