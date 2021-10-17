@@ -56,7 +56,6 @@ jobs:
     - name: Build
       run: |-
         docker build --tag "gcr.io/$PROJECT_ID/$IMAGE:latest" .
-          .
 
     # Push the Docker image to Google Container Registry
     - name: Publish
