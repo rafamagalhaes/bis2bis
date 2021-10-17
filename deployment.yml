@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bis2bis-app
+sepc:
+  replicas: 1
+  selector:
+  labels:
+    app: bis2bis-app
+  template:
+    metadata:
+      labels:
+        app: bis2bis-app
+    spec:
+      containers:
+      - name: server
+        image: gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
+        ports:
+        - containerPort: 5000
+        env:
+        - name: PORT
+          value: "5000"

@@ -1,0 +1,5 @@
+commonLabels:
+  app: bis2bis-app
+resources:
+- deployment.yml
+- service.yml
