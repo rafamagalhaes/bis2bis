@@ -7,7 +7,7 @@ variable "region" {
 }
 
 provider "google" {
-  credentials = file("bis2bis.json") 
+  credentials = ${{ secrets.GKE_SA_KEY }} 
   project     = var.project_id
   region      = var.region
 }
