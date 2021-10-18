@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: bis2bis-app
-          image: gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
+          image: gcr.io/PROJECT_ID/IMAGE:GITHUB_SHA
           ports:
           - containerPort: 5000
