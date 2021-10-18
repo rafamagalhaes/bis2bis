@@ -6,7 +6,7 @@ metadata:
     app: bis2bis-app
 spec:
   replicas: 1
-  progressDeadlineSeconds: 1000
+  progressDeadlineSeconds: 10000
   selector:
     matchLabels:
       app: bis2bis-app
