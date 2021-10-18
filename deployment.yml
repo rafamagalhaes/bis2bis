@@ -7,8 +7,8 @@ metadata:
 spec:
   replicas: 1
   selector:
-  matchLabels:
-    app: bis2bis-app
+    matchLabels:
+      app: bis2bis-app
   template:
     metadata:
       labels:
