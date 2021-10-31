@@ -51,6 +51,7 @@ jobs:
         working-directory: ${{ env.workdir }}
   
   setup-build-publish-deploy:
+    needs: deploy-gke 
     name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
     environment: production
