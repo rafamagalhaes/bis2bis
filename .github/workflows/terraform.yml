@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  WORKDIR: ./deploy_gke
+  workdir: ./deploy_gke
 
 jobs:
   deploy:
@@ -32,12 +32,15 @@ jobs:
         id: init
         run: |-
           terraform init
+        working-directory: ${{ env.workdir }}
 
       - name: Terraform Plan
         id: plan
         run: |-
           terraform plan
+        working-directory: ${{ env.workdir }}
 
       - name: Terraform Apply
         run: |-
           terraform apply --auto-approve
+        working-directory: ${{ env.workdir }}
