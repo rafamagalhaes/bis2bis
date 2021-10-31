@@ -7,7 +7,6 @@ variable "region" {
 }
 
 provider "google" {
-  credentials = ${{ secrets.GKE_SA_KEY }} 
   project     = var.project_id
   region      = var.region
 }
